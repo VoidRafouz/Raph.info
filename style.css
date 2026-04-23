@@ -173,11 +173,10 @@ footer{
     padding: 10px;
 }
 iframe {
-    margin-left: 0px;
     border: 8px solid #E63946 ;
     overflow: hidden;
-    width: 960px;
     height: 600px;
+    width: 1000px;
 }
 #projectSearch {
     padding : 10px;

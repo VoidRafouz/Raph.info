@@ -2,15 +2,23 @@
     font-family: "Opensans";
     src: url(OpenSans-Regular.ttf) format("truetype");  
 }
+* {
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+}
 body {
     font-family: "Open Sans", Arial, sans-serif;
     margin: 0;
     background-image: url("imgs/backgrd3.jpg");
     background-color: #000000;
     background-repeat: no-repeat;
-    height: 100%;
     background-size: cover;
     opacity: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -39,12 +47,14 @@ header {
     position: absolute;
     right: 0;
     top: 0;
+    overflow-x: hidden;
 }
 .myhidden {
     display: hide;
 }
 section {
   padding: 0px;
+  flex: 1;
 }
 .btn_side{
     position: absolute;
@@ -59,6 +69,29 @@ section {
     border-radius: 13px;
     user-select: none;
 }
+.top-navbar .btn_side {
+    position: static;
+    font-size: 25px;
+    color: rgba(197,2,15,0.968);
+    background:  transparent;
+    padding: 4px 10px;
+    border: none;
+    z-index: 10010;
+}
+.top-navbar a {
+    color: rgba(239, 228, 213, 0.968);
+    text-decoration: none;
+    text-align: left;
+    margin-right: 6px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.top-navbar a:hover {
+    background: rgba(148, 36, 36, 0.299);
+    border-radius: 6px;
+}
+
+
 .btn_side:hover{
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -75,8 +108,8 @@ section {
 }
 
 #projects {
-    font-size: 30px;
-    color: pink;
+    font-size: 20px;
+    color:  rgba(239, 228, 213, 0.968);
     margin-left: 80px;
     margin-top: 60px;
 }
@@ -140,11 +173,14 @@ display: block;
 }
 .mySidenav_open{
     width: 180px;
+     z-index: 1000000;
 }
 .sidemenu_open{
     margin-left: 250px;
+    z-index: 1000000;
 }
 .sidemenu{
+    z-index: 1000000;
     margin-top: 0px;
 }
 #mySidenav{
@@ -171,18 +207,23 @@ display: block;
 }
 #contact{
     color: white;
+    margin: 40px;
 }
 footer{
     color: white;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
+    width: 100%;
+    margin-top: auto;
 }
 iframe {
-    border: 8px solid #E63946 ;
+    border: 8px solid #E63946;
     overflow: hidden;
     height: 600px;
-    width: 1000px;
+    width: 100%;
+    max-width: calc(100% - 16px);
+    box-sizing: border-box;
 }
 #projectSearch {
     padding : 10px;
@@ -210,4 +251,89 @@ iframe {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+/* Top horizontal scrolling navbar */
+.top-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10005;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    gap: 10px;
+    backdrop-filter: blur(4px);
+    width: 100%;
+}
+.nav-scroll {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.nav-scroll::-webkit-scrollbar { height: 8px; }
+.nav-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+.nav-link {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin-right: 6px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.nav-link:hover { background: rgba(255,255,255,0.06); }
+.nav-search {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 100px;
+    margin-left: auto;
+}
+.nav-search #projectSearch { visibility: visible; width: 220px; padding: 8px; border-radius: 6px; border: none; background: #E63946; color: #fff; }
+.nav-search #searchToggle { padding: 8px 10px; border-radius: 6px; background:#1F6FEB; color:white; border:none; cursor:pointer; }
+.search-results { position: absolute; top: 48px; right: 10px; left: auto; background:#E63946; list-style:none; padding:0; margin:0; max-height:300px; overflow:auto; z-index:10006; width:260px; }
+
+@media (max-width: 600px) {
+    .nav-search #projectSearch { width: 140px; }
+}
+
+#headerintro {
+    font-size: 30px;
+    color: rgba(239, 228, 213, 0.968);
+    margin-right: 100px;
+    text-align: left;
+}
+#consultua{
+    position: static;
+    color: rgba(239, 228, 213, 0.968);
+    margin-bottom: 150px;
+    Width: 100%;
+    max-height:20%;
+    
+}
+#HeaderProject {
+    margin: 20px;
+    padding: 20px;
+    color: rgba(239, 228, 213, 0.968);
+    text-align: center;
+}
+#HeaderProject h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+#HeaderProject p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+#bodytext p {
+    margin: 100px;
+    padding: 20px;
+    color: rgba(239, 228, 213, 0.968);
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0.6 px;
 }

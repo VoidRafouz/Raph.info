@@ -382,6 +382,12 @@ iframe {
     font-size: 25px;
     letter-spacing: 0.6 px;
     margin-right: 100px;
+       opacity: 1;
+    transition: all 0.9s ease;
+    @starting-style {
+    opacity: 0;
+    translate: 0 -80px;
+    }
     
 }
 #bodytext a:visited  {

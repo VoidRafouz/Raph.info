@@ -306,7 +306,9 @@ iframe {
     color: rgba(239, 228, 213, 0.968);
     margin-right: 100px;
     text-align: left;
+  
 }
+
 #consultua{
     position: static;
     color: rgba(239, 228, 213, 0.968);
@@ -317,27 +319,93 @@ iframe {
 }
 #HeaderProject {
     margin: 20px;
-    padding: 20px;
+    margin-bottom: 100px;
     color: rgba(239, 228, 213, 0.968);
     text-align: center;
 }
 #HeaderProject h1 {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 10px;
+    letter-spacing: 0.6 px;
+    opacity: 1;
+    transition: all 0.9s ease;
+    @starting-style {
+    opacity: 0;
+    translate: 0 -80px;
+    }
 }
 #HeaderProject p {
-    font-size: 18px;
+    font-size: 30px;
     margin: 5px 0;
+    letter-spacing: 0.6 px;
+    opacity: 1;
+    transition: all 0.9s ease;
+    @starting-style {
+    opacity: 0;
+    translate: 0 -80px;
+    }
 }
-#bodytext p {
-    margin: 100px;
-    padding: 20px;
+#bodytext h4 {
+    font-weight: normal;
     color: rgba(239, 228, 213, 0.968);
     text-align: left;
-    font-size: 18px;
+    font-size: 25px;
+    margin-right: 50px;
     letter-spacing: 0.6 px;
+      opacity: 1;
+    transition: all 0.9s ease;
+    @starting-style {
+    opacity: 0;
+    translate: 0 -80px;
+    }
+}
+#bodytext h3 {
+    font-weight: normal;
+    color: rgba(239, 228, 213, 0.968);
+    text-align: left;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    letter-spacing: 0.6 px;
+    margin-top: 100px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: auto;
+    
+}
+
+#bodytext p {
+    margin-left: 100px;
+    color: rgba(239, 228, 213, 0.968);
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 0.6 px;
+    margin-right: 100px;
+    
 }
 #bodytext a:visited  {
     color: #E63946;
     text-decoration: none;
+}
+.sheets_sidetext {
+    position: relative;
+    display: flex;
+}
+.sheets_sidetext p {
+    margin-left:none;
+    font-size: 20px;
+    color: rgba(239, 228, 213, 0.968);
+    text-align: left;
+    max-width: 650px;
+    letter-spacing: 0.6 px;
+}
+.sheets_sidetext h1 {
+    margin-left: 10px;
+    font-size: 30px;
+    color: rgba(239, 228, 213, 0.968);
+    text-align: left;
+    max-width: 400px;
+    font-weight: normal
+    letter-spacing: 0.6 px;
 }

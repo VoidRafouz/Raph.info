@@ -322,6 +322,8 @@ iframe {
     margin-bottom: 100px;
     color: rgba(239, 228, 213, 0.968);
     text-align: center;
+    border:#000000 solid 5px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 #HeaderProject h1 {
     font-size: 50px;

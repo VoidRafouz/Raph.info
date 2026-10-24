@@ -390,7 +390,7 @@ iframe {
     opacity: 0;
     translate: 0 -80px;
     }
-    
+
 }
 #bodytext a:visited  {
     color: #E63946;
@@ -427,5 +427,36 @@ iframe {
     @starting-style {
         opacity: 0;
         translate: 0 -80px;
+    }
+}
+.organograma-container {
+    display: flow-root;
+    margin-right: 100px;
+}
+#organograma {
+    float: left;
+    width: min(48%, 900px);
+    height: auto;
+    margin: 0 24px 20px 0;
+    border-radius: 32px;
+    opacity: 1;
+    transition: all 0.9s ease;
+}
+#organograma + p {
+    max-width: none;
+    margin: 0;
+}
+@media (max-width: 700px) {
+    #organograma {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+    }
+    .organograma-container {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    #organograma + p {
+        margin: 0;
     }
 }

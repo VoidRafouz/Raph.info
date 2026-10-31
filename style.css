@@ -460,3 +460,61 @@ iframe {
         margin: 0;
     }
 }
+.drakelilyatch-container {
+    display: flow-root;
+    margin-right: 100px;
+}
+#drakelilyatch {
+    float: left;
+    width: min(48%, 900px);
+    height: auto;
+    margin: 0 24px 20px 0;
+    border-radius: 32px;
+    opacity: 1;
+    transition: all 0.9s ease;
+}
+#drakelilyatch + p {
+    max-width: none;
+    margin: 0;
+}
+@media (max-width: 700px) {
+    #drakelilyatch {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+    }
+    .drakelilyatch-container {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    #drakelilyatch + p {
+        margin: 0;
+    }
+}
+.leiimg1-container {
+    display: flow-root;
+    margin-right: 100px;
+}
+.leiimg1-container p {
+    margin: 0;
+}
+#leiimg1 {
+    float: right;
+    width: min(48%, 900px);
+    height: auto;
+    margin: 0 0 20px 24px;
+    border-radius: 32px;
+    opacity: 1;
+    transition: all 0.9s ease;
+}
+@media (max-width: 700px) {
+    #leiimg1 {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px 0;
+    }
+    .leiimg1-container {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}

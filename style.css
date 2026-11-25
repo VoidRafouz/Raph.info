@@ -495,6 +495,11 @@ iframe {
     display: flow-root;
     margin-right: 100px;
 }
+.uclei-page #bodytext p {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: justify;
+}
 .leiimg1-container p {
     margin: 0;
 }
